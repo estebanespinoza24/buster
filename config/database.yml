@@ -27,6 +27,8 @@ default: &default
 development:
   <<: *default
   database: splurty_development
+  #username: splurty
+  #password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,5 +86,5 @@ test:
 production:
   <<: *default
   database: splurty_production
-# username: splurty
-# password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
+  username: splurty
+  password: <%= ENV['SPLURTY_DATABASE_PASSWORD'] %>
